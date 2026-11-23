@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   Activity, ArrowDown, ArrowRight, ArrowUpRight, AudioLines, BookOpen,
   BrainCircuit, Check, ChevronRight, Code2, Cpu, Database, ExternalLink,
@@ -114,15 +114,19 @@ function ProjectCard({ project, onSelect }) {
 }
 
 function ProjectDialog({ project, onClose }) {
+  const closeButtonRef = useRef(null);
   useEffect(() => {
     if (!project) return;
     const escape = (event) => { if (event.key === "Escape") onClose(); };
+    const previouslyFocused = document.activeElement;
+    closeButtonRef.current?.focus();
     document.addEventListener("keydown", escape);
     const oldOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     return () => {
       document.removeEventListener("keydown", escape);
       document.body.style.overflow = oldOverflow;
+      previouslyFocused?.focus?.();
     };
   }, [project, onClose]);
 
@@ -130,7 +134,7 @@ function ProjectDialog({ project, onClose }) {
   return (
     <div className="modal-backdrop" onMouseDown={(event) => { if (event.target === event.currentTarget) onClose(); }}>
       <section role="dialog" aria-modal="true" aria-labelledby="dialog-heading" className="project-dialog">
-        <button className="modal-close" onClick={onClose} aria-label="Close project details"><X size={20}/></button>
+        <button ref={closeButtonRef} className="modal-close" onClick={onClose} aria-label="Close project details"><X size={20}/></button>
         <div className="modal-overline">PROJECT CASE STUDY / {project.id}</div>
         <div className="modal-headline"><h2 id="dialog-heading">{project.title}</h2><span>{project.status}</span></div>
         <p className="modal-intro">{project.headline}</p>

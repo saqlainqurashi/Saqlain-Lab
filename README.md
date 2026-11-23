@@ -41,3 +41,17 @@ Professional content is based on the supplied resume and previously built projec
 ## Stack
 
 React, Vite, Lucide icons, custom responsive CSS and lightweight native CSS animations.
+
+## Continuous integration
+
+GitHub Actions runs a production build on each push or pull request to `main`. Check the **Actions** tab to confirm the build succeeds. Deploy only after that check passes.
+
+## Next design improvements
+
+- Replace abstract project visuals with screenshots and architecture diagrams approved for public use.
+- Add a reviewed PDF resume as a downloadable public asset (only after removing any contact details you do not want published).
+- Add a custom domain and social sharing image after deploying.
+
+## Accessibility
+
+The site supports keyboard navigation, visible focus styles, reduced-motion preferences and mobile layouts. The project dialog focuses its close button and returns focus when dismissed.
