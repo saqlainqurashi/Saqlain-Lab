@@ -8,6 +8,8 @@ import {
 import { experience, projects, skillGroups } from "./data";
 import ProjectVisual from "./ProjectVisual";
 import CaseStudyDialog from "./CaseStudy";
+import HeroExperience from "./HeroExperience";
+import SignalLab from "./SignalLab";
 
 const email = "muhammadsaqlainarshad@gmail.com";
 const github = "https://github.com/saqlainqurashi";
@@ -24,62 +26,24 @@ function Mark() {
   );
 }
 
-function NeuralVisual() {
-  const nodes = [
-    [70, 90, 4], [170, 57, 3], [286, 65, 5], [398, 105, 3],
-    [70, 231, 5], [155, 168, 4], [253, 193, 7], [383, 227, 5],
-    [117, 332, 3], [222, 354, 4], [337, 341, 5], [411, 386, 3],
-    [82, 427, 3], [307, 445, 3]
-  ];
-  const edges = [
-    [0,1],[0,4],[0,5],[1,2],[1,5],[1,6],[2,3],[2,6],[2,7],
-    [3,7],[4,5],[4,8],[5,6],[5,8],[5,9],[6,7],[6,9],[6,10],
-    [7,10],[7,11],[8,9],[8,12],[9,10],[9,12],[9,13],
-    [10,11],[10,13],[11,13]
-  ];
+function ProjectCard({ project, onSelect, featured = false }) {
+  function onPointerMove(event) {
+    if (event.pointerType === "touch" || !window.matchMedia("(hover: hover) and (pointer: fine)").matches || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const rect = event.currentTarget.getBoundingClientRect();
+    const x = Math.max(0, Math.min(1, (event.clientX - rect.left) / rect.width));
+    const y = Math.max(0, Math.min(1, (event.clientY - rect.top) / rect.height));
+    event.currentTarget.style.setProperty("--card-rotate-x", ((.5 - y) * 4.3) + "deg");
+    event.currentTarget.style.setProperty("--card-rotate-y", ((x - .5) * 5.8) + "deg");
+    event.currentTarget.style.setProperty("--pointer-x", (x * 100) + "%");
+    event.currentTarget.style.setProperty("--pointer-y", (y * 100) + "%");
+  }
+  function onPointerLeave(event) {
+    event.currentTarget.style.setProperty("--card-rotate-x", "0deg");
+    event.currentTarget.style.setProperty("--card-rotate-y", "0deg");
+  }
   return (
-    <div className="neural-visual" aria-hidden="true">
-      <div className="visual-noise" />
-      <div className="visual-grid" />
-      <div className="orbit orbit-a" /><div className="orbit orbit-b" />
-      <svg className="neural-network" viewBox="0 0 480 500" fill="none">
-        <defs>
-          <linearGradient id="edge" x1="0" y1="0" x2="480" y2="500">
-            <stop stopColor="#60e9f4" stopOpacity=".18" />
-            <stop offset=".55" stopColor="#9c82ff" stopOpacity=".5" />
-            <stop offset="1" stopColor="#60e9f4" stopOpacity=".1" />
-          </linearGradient>
-          <radialGradient id="core">
-            <stop stopColor="#8af3fd" stopOpacity=".95" />
-            <stop offset="1" stopColor="#80a2ff" stopOpacity="0" />
-          </radialGradient>
-        </defs>
-        {edges.map((edge, i) => (
-          <line key={i} x1={nodes[edge[0]][0]} y1={nodes[edge[0]][1]}
-            x2={nodes[edge[1]][0]} y2={nodes[edge[1]][1]}
-            stroke="url(#edge)" strokeWidth={i % 4 === 0 ? 1.5 : 1} />
-        ))}
-        <circle cx="253" cy="193" r="78" fill="url(#core)" opacity=".19" />
-        {nodes.map((n, i) => (
-          <g key={i}>
-            <circle cx={n[0]} cy={n[1]} r={n[2] + 7} fill="#70e2f2" opacity=".045" />
-            <circle cx={n[0]} cy={n[1]} r={n[2]} fill={i % 3 === 0 ? "#aa91ff" : "#8cf3fb"} />
-          </g>
-        ))}
-      </svg>
-      <div className="core-display"><BrainCircuit size={38} strokeWidth={1.1} /><span>AI CORE</span></div>
-      <div className="visual-label visual-label-top"><span className="green-dot" /> SYSTEM ONLINE <span>● ● ●</span></div>
-      <div className="visual-label visual-label-bottom"><span>INTELLIGENCE / ACTIVE</span><span>00:01</span></div>
-      <div className="floating-card card-model"><div className="mini-icon"><Activity size={16}/></div><span><strong>Inference pipeline</strong><small>Processing signals...</small></span><span className="tiny-bars"><i/><i/><i/><i/></span></div>
-      <div className="floating-card card-agent"><div className="mini-icon violet-icon"><Workflow size={16}/></div><span><strong>Agent workflow</strong><small>Orchestration ready</small></span><Check size={14} className="check-icon"/></div>
-      <div className="side-axis">DESIGN · BUILD · DEPLOY</div>
-    </div>
-  );
-}
-
-function ProjectCard({ project, onSelect }) {
-  return (
-    <article className="project-card">
+    <article className={featured ? "project-card project-card-featured" : "project-card"}
+       onPointerMove={onPointerMove} onPointerLeave={onPointerLeave}>
       <button className="project-visual-button" onClick={() => onSelect(project)}
         aria-label={"View " + project.title + " case study"}>
         <ProjectVisual project={project} />
@@ -134,7 +98,7 @@ function App() {
         <div className="container nav-inner">
           <Mark />
           <nav className={menuOpen ? "nav-links is-open" : "nav-links"} aria-label="Main navigation">
-            {["About", "Work", "Experience", "Expertise"].map(label =>
+            {["About", "Lab", "Work", "Experience", "Expertise"].map(label =>
               <a key={label} href={"#" + label.toLowerCase()} onClick={() => setMenuOpen(false)}>{label}</a>
             )}
             <a className="nav-mobile-contact" href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
@@ -149,17 +113,18 @@ function App() {
 
       <main id="main">
         <section className="hero container" aria-labelledby="hero-title">
+          <span className="hero-ambient" aria-hidden="true">AI/</span>
           <div className="hero-copy">
             <div className="eyebrow"><span className="pulse-dot"/> SENIOR AI / ML ENGINEER <span className="eyebrow-line"/></div>
-            <h1 id="hero-title">Engineering<br/><em>intelligence.</em><br/>Building impact<span className="hero-period">.</span></h1>
-            <p className="hero-description">I'm <strong>Muhammad Saqlain Arshad</strong> — an AI engineer turning complex ideas into practical systems through generative AI, automation, and scalable software.</p>
+            <h1 id="hero-title">Beyond<br/><em>the prompt.</em><br/>Into <span className="hero-outline">production.</span></h1>
+            <p className="hero-description">I'm <strong>Muhammad Saqlain Arshad</strong>, a Senior AI/ML Engineer building intelligent software that goes beyond demos — from RAG and AI automation to enterprise platforms that solve real problems.</p>
             <div className="hero-buttons">
               <a href="#work" className="button button-primary">Explore my work <ArrowUpRight size={18}/></a>
               <a href="#contact" className="button button-outline">Get in touch <ArrowRight size={17}/></a>
             </div>
             <div className="hero-footnote"><span className="footnote-line"/><span>BASED IN LAHORE, PAKISTAN <b>·</b> WORKING ACROSS BORDERS</span></div>
           </div>
-          <NeuralVisual />
+          <HeroExperience />
           <a className="scroll-prompt" href="#about"><ArrowDown size={14}/> SCROLL TO EXPLORE</a>
         </section>
 
@@ -186,15 +151,17 @@ function App() {
           </div>
         </section>
 
+        <SignalLab />
+
         <section className="work section container" id="work">
-          <div className="section-heading"><div className="section-kicker"><span>02 / SELECTED WORK</span><span className="kicker-rule"/></div>
+          <div className="section-heading"><div className="section-kicker"><span>03 / SELECTED WORK</span><span className="kicker-rule"/></div>
             <div className="section-heading-main"><h2>Proof over <em>promises.</em></h2><p>A selection of systems I've designed, developed, or contributed to.</p></div>
           </div>
           <div className="filter-row" role="group" aria-label="Filter projects">
             {filters.map(item => <button type="button" key={item} onClick={() => setFilter(item)} aria-pressed={filter === item} className={filter === item ? "filter-button active" : "filter-button"}>{item}</button>)}
           </div>
-          <div className="project-grid">{visibleProjects.map(project =>
-            <ProjectCard key={project.id} project={project} onSelect={openProject}/>
+          <div className="project-grid">{visibleProjects.map((project, i) =>
+            <ProjectCard key={project.id} project={project} featured={filter === "All" && i === 0} onSelect={openProject}/>
           )}</div>
           <div className="arch-feature">
             <div className="arch-feature-copy">
@@ -211,7 +178,7 @@ function App() {
         <section className="experience-section section" id="experience">
           <div className="container experience-layout">
             <div className="experience-intro">
-              <div className="section-kicker"><span>03 / THE JOURNEY</span><span className="kicker-rule"/></div>
+              <div className="section-kicker"><span>04 / THE JOURNEY</span><span className="kicker-rule"/></div>
               <h2>Built through<br/><em>experience.</em></h2>
               <p>Across enterprise platforms, automation, and applied machine learning, each role has shaped how I approach engineering.</p>
               <div className="experience-decoration"><span>DESIGN</span><span>→</span><span>BUILD</span><span>→</span><span>SHIP</span></div>
@@ -227,7 +194,7 @@ function App() {
         </section>
 
         <section className="expertise section container" id="expertise">
-          <div className="section-heading"><div className="section-kicker"><span>04 / TOOLKIT</span><span className="kicker-rule"/></div>
+          <div className="section-heading"><div className="section-kicker"><span>05 / TOOLKIT</span><span className="kicker-rule"/></div>
             <div className="section-heading-main"><h2>My engineering <em>toolkit.</em></h2><p>Tools are never the goal. They're how ideas become reliable systems.</p></div>
           </div>
           <div className="skills-grid">
@@ -242,7 +209,7 @@ function App() {
 
         <section className="contact-section section" id="contact">
           <div className="container contact-inner">
-            <div className="section-kicker"><span>05 / WHAT'S NEXT?</span><span className="kicker-rule"/></div>
+            <div className="section-kicker"><span>06 / WHAT'S NEXT?</span><span className="kicker-rule"/></div>
             <div className="contact-content"><div><p className="contact-eyebrow">HAVE A CHALLENGE IN MIND?</p><h2>Let's build something<br/><em>intelligent.</em></h2><p className="contact-description">Whether it's an AI product, automation idea, or engineering opportunity, I'd love to hear what you're working on.</p></div>
               <a href={"mailto:" + email + "?subject=Let's%20build%20something"} className="contact-arrow" aria-label="Start an email conversation"><ArrowUpRight size={40}/></a></div>
             <div className="contact-bottom"><a className="email-link" href={"mailto:" + email}>{email} <ArrowUpRight size={17}/></a>

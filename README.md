@@ -75,3 +75,24 @@ Architecture visuals are **conceptual summaries**, not verified internal deploym
 - `src/CaseStudy.jsx`: case-study UI and architecture interactions.
 - `src/ProjectVisual.jsx`: distinctive preview illustrations.
 - `src/project-showcase.css` and `src/case-studies.css`: design and responsive behavior.
+
+
+## Immersive design (Phase 5)
+
+- **Actual WebGL hero object**: React Three Fiber renders a luminous geometric artifact with orbiting rings, dynamic lighting, particles, and cursor-reactive rotation. The scene is dynamically imported so case studies and page content do not require the 3D bundle during initial parsing.
+- **Motion controls**: Pause / animate button; motion automatically respects the visitor's reduced-motion preference. The scene stops its animation loop when off-screen and degrades to a CSS 3D fallback when WebGL is unavailable.
+- **Interactive Signal Lab**: Three selectable creative modes (Reason, Automate, Ship) with layered, perspective-transformed CSS 3D system panels.
+- **Physical depth cards**: Pointer-reactive 3D tilt and specular lighting, plus a full-width feature card for Collect360 on the unfiltered project view.
+- **Responsive and accessible**: keyboard-operable interactive controls, touch fallback, mobile-specific layout, reduced-motion overrides.
+
+### Dependencies
+
+`@react-three/fiber` v9 and Three.js support the React 19 application. WebGL artwork loads through `React.lazy`, not into the main JavaScript bundle.
+
+To run after pulling the changes:
+
+```sh
+git pull origin main
+npm install
+npm run dev
+```
