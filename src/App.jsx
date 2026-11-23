@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   Activity, ArrowDown, ArrowRight, ArrowUpRight, AudioLines, BookOpen,
   BrainCircuit, Check, ChevronRight, Code2, Cpu, Database, ExternalLink,
@@ -6,15 +6,13 @@ import {
   Sparkles, Workflow, X
 } from "lucide-react";
 import { experience, projects, skillGroups } from "./data";
+import ProjectVisual from "./ProjectVisual";
+import CaseStudyDialog from "./CaseStudy";
 
 const email = "muhammadsaqlainarshad@gmail.com";
 const github = "https://github.com/saqlainqurashi";
 const linkedin = "https://www.linkedin.com/in/muhammad-saqlain-arshad/";
 
-const symbolMap = {
-  network: Network, shield: ShieldCheck, brain: BrainCircuit,
-  audio: AudioLines, workflow: Workflow, scan: ScanLine, database: Database
-};
 const filters = ["All", "Enterprise AI", "GenAI & RAG", "Automation", "Computer Vision"];
 
 function Mark() {
@@ -79,25 +77,12 @@ function NeuralVisual() {
   );
 }
 
-function ProjectArt({ project }) {
-  const Icon = symbolMap[project.symbol] || Cpu;
-  return (
-    <div className={"project-art tone-" + project.tone} aria-hidden="true">
-      <span className="art-index">LAB / {project.id}</span>
-      <div className="art-circles"><span/><span/><span/></div>
-      <div className="art-icon"><Icon size={39} strokeWidth={1.2}/></div>
-      <div className="art-connector art-connector-a"/><div className="art-connector art-connector-b"/>
-      <div className="art-caption"><span>ENGINEERED SYSTEM</span><span className="art-caption-dot">●</span></div>
-    </div>
-  );
-}
-
 function ProjectCard({ project, onSelect }) {
   return (
     <article className="project-card">
       <button className="project-visual-button" onClick={() => onSelect(project)}
         aria-label={"View " + project.title + " case study"}>
-        <ProjectArt project={project} />
+        <ProjectVisual project={project} />
       </button>
       <div className="project-information">
         <div className="project-meta"><span>{project.type}</span><span>{project.period}</span></div>
@@ -113,48 +98,32 @@ function ProjectCard({ project, onSelect }) {
   );
 }
 
-function ProjectDialog({ project, onClose }) {
-  const closeButtonRef = useRef(null);
-  useEffect(() => {
-    if (!project) return;
-    const escape = (event) => { if (event.key === "Escape") onClose(); };
-    const previouslyFocused = document.activeElement;
-    closeButtonRef.current?.focus();
-    document.addEventListener("keydown", escape);
-    const oldOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.removeEventListener("keydown", escape);
-      document.body.style.overflow = oldOverflow;
-      previouslyFocused?.focus?.();
-    };
-  }, [project, onClose]);
-
-  if (!project) return null;
-  return (
-    <div className="modal-backdrop" onMouseDown={(event) => { if (event.target === event.currentTarget) onClose(); }}>
-      <section role="dialog" aria-modal="true" aria-labelledby="dialog-heading" className="project-dialog">
-        <button ref={closeButtonRef} className="modal-close" onClick={onClose} aria-label="Close project details"><X size={20}/></button>
-        <div className="modal-overline">PROJECT CASE STUDY / {project.id}</div>
-        <div className="modal-headline"><h2 id="dialog-heading">{project.title}</h2><span>{project.status}</span></div>
-        <p className="modal-intro">{project.headline}</p>
-        <p>{project.description}</p>
-        <h3>My contribution</h3>
-        <p>{project.contribution}</p>
-        <h3>Engineering focus</h3>
-        <ul>{project.notes.map(note => <li key={note}><ChevronRight size={15}/>{note}</li>)}</ul>
-        <div className="project-tags modal-tags">{project.stack.map(tag => <span key={tag}>{tag}</span>)}</div>
-        {project.url && <a className="button button-primary modal-github" href={project.url} target="_blank" rel="noopener noreferrer"><Github size={17}/> Explore repository <ArrowUpRight size={16}/></a>}
-        <p className="modal-disclaimer">Some enterprise details are summarized at a high level for confidentiality.</p>
-      </section>
-    </div>
-  );
+function getCaseFromUrl() {
+  const id = new URLSearchParams(window.location.search).get("case");
+  return projects.find(project => project.id === id) || null;
 }
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [filter, setFilter] = useState("All");
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState(getCaseFromUrl);
+  useEffect(() => {
+    function onBackOrForward() { setSelectedProject(getCaseFromUrl()); }
+    window.addEventListener("popstate", onBackOrForward);
+    return () => window.removeEventListener("popstate", onBackOrForward);
+  }, []);
+  function openProject(project) {
+    const url = new URL(window.location.href);
+    url.searchParams.set("case", project.id);
+    window.history.pushState({case: project.id}, "", url);
+    setSelectedProject(project);
+  }
+  function closeProject() {
+    const url = new URL(window.location.href);
+    url.searchParams.delete("case");
+    window.history.pushState({}, "", url);
+    setSelectedProject(null);
+  }
   const visibleProjects = useMemo(() =>
     filter === "All" ? projects : projects.filter(project => project.group === filter), [filter]);
 
@@ -225,9 +194,18 @@ function App() {
             {filters.map(item => <button type="button" key={item} onClick={() => setFilter(item)} aria-pressed={filter === item} className={filter === item ? "filter-button active" : "filter-button"}>{item}</button>)}
           </div>
           <div className="project-grid">{visibleProjects.map(project =>
-            <ProjectCard key={project.id} project={project} onSelect={setSelectedProject}/>
+            <ProjectCard key={project.id} project={project} onSelect={openProject}/>
           )}</div>
-          <p className="work-note"><Sparkles size={15}/> Interested in implementation details? Select any project to explore its engineering focus.</p>
+          <div className="arch-feature">
+            <div className="arch-feature-copy">
+              <span>DEEP DIVE / FEATURED ARCHITECTURE</span>
+              <h3>Inside the RAG pipeline.</h3>
+              <p>See how KnowledgeForge AI moves from uploaded documents to grounded answers. Explore every stage of the system.</p>
+              <button type="button" onClick={() => openProject(projects[2])}>Explore the architecture <ArrowUpRight size={16}/></button>
+            </div>
+            <div className="arch-feature-flow" aria-hidden="true"><span>INGEST</span><ArrowRight size={16}/><span>EMBED</span><ArrowRight size={16}/><span>RETRIEVE</span><ArrowRight size={16}/><span>ANSWER</span></div>
+          </div>
+          <p className="work-note"><Sparkles size={15}/> Project previews are original illustrations. Select a project to read the case study and explore its conceptual architecture.</p>
         </section>
 
         <section className="experience-section section" id="experience">
@@ -275,7 +253,7 @@ function App() {
       </main>
 
       <footer className="site-footer"><div className="container footer-inner"><Mark/><span>© {new Date().getFullYear()} Muhammad Saqlain Arshad</span><a href="#top">BACK TO TOP ↑</a></div></footer>
-      <ProjectDialog project={selectedProject} onClose={() => setSelectedProject(null)}/>
+      <CaseStudyDialog project={selectedProject} onClose={closeProject}/>
     </div>
   );
 }

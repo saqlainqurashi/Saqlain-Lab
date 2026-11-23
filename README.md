@@ -55,3 +55,23 @@ GitHub Actions runs a production build on each push or pull request to `main`. C
 ## Accessibility
 
 The site supports keyboard navigation, visible focus styles, reduced-motion preferences and mobile layouts. The project dialog focuses its close button and returns focus when dismissed.
+
+## Phase 4 — Case-study system
+
+- Seven **original UI-inspired project previews** (not actual product screenshots).
+- Public-friendly case studies with challenge, approach, contribution and demonstrated capability.
+- Interactive, accessible architecture lanes with selectable stages and explanatory descriptions.
+- Shareable deep links: add `?case=03` to the URL to open the KnowledgeForge AI study; other IDs run from `01` through `07`.
+- Focus-managed study dialogs and mobile-friendly horizontal architecture scrolling.
+- A featured RAG architecture callout in the project gallery.
+
+### Architecture accuracy and confidentiality
+
+Architecture visuals are **conceptual summaries**, not verified internal deployment blueprints. Public enterprise examples omit sensitive bank and insurance platform details. Review every claim and repository link for employer confidentiality requirements before sharing widely.
+
+### Editing case studies
+
+- `src/caseStudies.js`: narratives, interactive flow stages and integrations.
+- `src/CaseStudy.jsx`: case-study UI and architecture interactions.
+- `src/ProjectVisual.jsx`: distinctive preview illustrations.
+- `src/project-showcase.css` and `src/case-studies.css`: design and responsive behavior.
