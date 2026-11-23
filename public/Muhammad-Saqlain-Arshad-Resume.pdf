@@ -1,0 +1,172 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [ 5 0 R 7 0 R 9 0 R ] /Count 3 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 5099 >>
+stream
+0.110 0.710 0.780 rg 48 766 516 3 re f
+0.060 0.170 0.240 rg BT /F2 22 Tf 1 0 0 1 48.0 754.0 Tm (Muhammad Saqlain Arshad) Tj ET
+0.200 0.350 0.440 rg BT /F2 10.3 Tf 1 0 0 1 48.0 725.0 Tm (AI Engineer / ML Engineer / AI Automation Engineer) Tj ET
+0.300 0.400 0.490 rg BT /F1 8.4 Tf 1 0 0 1 48.0 705.0 Tm (muhammadsaqlainarshad@gmail.com  |  +923134975658  |  Lahore, Pakistan) Tj ET
+0.300 0.400 0.490 rg BT /F1 8.4 Tf 1 0 0 1 48.0 690.0 Tm (linkedin.com/in/muhammad-saqlain-arshad  |  github.com/saqlainqurashi) Tj ET
+0.050 0.490 0.590 rg BT /F2 10.5 Tf 1 0 0 1 48.0 665.0 Tm (PROFESSIONAL SUMMARY) Tj ET
+0.810 0.875 0.905 RG 48 656 m 564 656 l S
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 48.0 648.0 Tm (AI engineer with extensive experience in building and deploying machine learning models for real-world) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 48.0 634.3 Tm (applications. Proficient in Python, TensorFlow, PyTorch, and cloud platforms. Experienced in collaborating) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 48.0 620.6 Tm (across teams, developing scalable AI solutions and transforming complex datasets into useful insights.) Tj ET
+0.050 0.490 0.590 rg BT /F2 10.5 Tf 1 0 0 1 48.0 589.9 Tm (EXPERIENCE) Tj ET
+0.810 0.875 0.905 RG 48 580.8999999999999 m 564 580.8999999999999 l S
+0.080 0.190 0.280 rg BT /F2 10.8 Tf 1 0 0 1 48.0 565.9 Tm (Senior AI/ML Engineer  |  Rizviz International) Tj ET
+0.350 0.460 0.560 rg BT /F1 8.6 Tf 1 0 0 1 48.0 548.9 Tm (Sep 2026 - Present  |  Lahore, Pakistan) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 48.0 530.9 Tm (-) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 60.0 530.9 Tm (Working on Collect360, a Collection Management System for Allied Bank, focused on loan recovery,) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 60.0 517.2 Tm (delinquency management, automated case assignment, case handling and collection workflows.) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 48.0 496.5 Tm (-) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 60.0 496.5 Tm (Contributed to GetInsured AI, an insurance automation platform covering lead acquisition, automated) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 60.0 482.8 Tm (underwriting, policy issuance, management and post-policy servicing.) Tj ET
+0.080 0.190 0.280 rg BT /F2 10.8 Tf 1 0 0 1 48.0 455.1 Tm (Lead AI & Automation Engineer  |  Systematic IT Solutions) Tj ET
+0.350 0.460 0.560 rg BT /F1 8.6 Tf 1 0 0 1 48.0 438.1 Tm (Jun 2025 - Aug 2026  |  Lahore, Pakistan) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 48.0 420.1 Tm (-) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 60.0 420.1 Tm (Built intelligent chatbots and process automation pipelines using OpenAI APIs, n8n and custom) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 60.0 406.4 Tm (integrations to streamline business operations.) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 48.0 385.7 Tm (-) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 60.0 385.7 Tm (Developed and optimized algorithms in Python with TensorFlow and Keras.) Tj ET
+0.080 0.190 0.280 rg BT /F2 10.8 Tf 1 0 0 1 48.0 358.0 Tm (AI Developer & Instructor  |  Robotronics Pakistan \(Pvt.\) Limited) Tj ET
+0.350 0.460 0.560 rg BT /F1 8.6 Tf 1 0 0 1 48.0 341.0 Tm (Feb 2024 - Mar 2025  |  Lahore, Pakistan) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 48.0 323.0 Tm (-) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 60.0 323.0 Tm (Engineered AI models with machine learning, deep learning and computer vision to address real-world) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 60.0 309.3 Tm (problems.) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 48.0 288.6 Tm (-) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 60.0 288.6 Tm (Built solutions with TensorFlow, Keras and PyTorch, including image recognition, classification and) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 60.0 274.9 Tm (natural language processing.) Tj ET
+0.080 0.190 0.280 rg BT /F2 10.8 Tf 1 0 0 1 48.0 247.2 Tm (AI/ML Engineer  |  Cognizant) Tj ET
+0.350 0.460 0.560 rg BT /F1 8.6 Tf 1 0 0 1 48.0 230.2 Tm (Jul 2024 - Dec 2024  |  Remote) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 48.0 212.2 Tm (-) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 60.0 212.2 Tm (Built machine learning, deep learning and analytics applications, including image classification, object) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 60.0 198.5 Tm (detection, sentiment analysis and recommendation systems.) Tj ET
+0.080 0.190 0.280 rg BT /F2 10.8 Tf 1 0 0 1 48.0 170.8 Tm (AI/ML Engineer  |  Inxol Technologies) Tj ET
+0.350 0.460 0.560 rg BT /F1 8.6 Tf 1 0 0 1 48.0 153.8 Tm (Dec 2022 - Dec 2023  |  Lahore, Pakistan) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 48.0 135.8 Tm (-) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 60.0 135.8 Tm (Collaborated on an industry-specific AI solution; researched business problems and trained scalable ML/DL) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 60.0 122.1 Tm (models using Python, TensorFlow and Scikit-learn.) Tj ET
+0.450 0.550 0.630 rg BT /F1 8.5 Tf 1 0 0 1 539.0 30.0 Tm (1 / 3) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 8 0 R >>
+endobj
+8 0 obj
+<< /Length 4250 >>
+stream
+0.110 0.710 0.780 rg 48 766 516 3 re f
+0.060 0.170 0.240 rg BT /F2 15.4 Tf 1 0 0 1 48.0 754.0 Tm (Muhammad Saqlain Arshad) Tj ET
+0.050 0.490 0.590 rg BT /F2 10.5 Tf 1 0 0 1 48.0 705.0 Tm (EDUCATION) Tj ET
+0.810 0.875 0.905 RG 48 696 m 564 696 l S
+0.080 0.190 0.280 rg BT /F2 10.8 Tf 1 0 0 1 48.0 681.0 Tm (Bachelor of Science in Electrical Engineering) Tj ET
+0.350 0.460 0.560 rg BT /F1 8.6 Tf 1 0 0 1 48.0 664.0 Tm (Punjab University  |  2019 - 2023  |  Lahore, Pakistan) Tj ET
+0.050 0.490 0.590 rg BT /F2 10.5 Tf 1 0 0 1 48.0 636.0 Tm (TECHNICAL SKILLS) Tj ET
+0.810 0.875 0.905 RG 48 627 m 564 627 l S
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 48.0 619.0 Tm (-) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 60.0 619.0 Tm (Languages and engineering: Python, C++, SQL, FastAPI, REST APIs, System Design, Microservices,) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 60.0 605.3 Tm (PostgreSQL, Cassandra, Kafka, Memgraph.) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 48.0 584.6 Tm (-) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 60.0 584.6 Tm (Machine learning: Machine Learning, Deep Learning, TensorFlow, Keras, PyTorch, NLTK, Transformers, MLOps,) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 60.0 570.9 Tm (CNNs, RNNs, GANs, Supervised and Unsupervised Learning.) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 48.0 550.2 Tm (-) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 60.0 550.2 Tm (Generative AI and automation: LLMs, RAG, LangChain, LangGraph, MCP Server, Prompt Engineering, n8n, GHL.) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 48.0 529.5 Tm (-) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 60.0 529.5 Tm (Platforms: AWS, Docker, Kubernetes, Google Colab, MATLAB, AWS SES, Excalidraw, Git and GitHub.) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 48.0 508.8 Tm (-) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 60.0 508.8 Tm (Professional: Creative Thinking, Communication, Adaptability, Problem Solving, Time Management, Critical) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 60.0 495.1 Tm (Thinking, Teamwork.) Tj ET
+0.050 0.490 0.590 rg BT /F2 10.5 Tf 1 0 0 1 48.0 464.4 Tm (LANGUAGES) Tj ET
+0.810 0.875 0.905 RG 48 455.39999999999975 m 564 455.39999999999975 l S
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 48.0 447.4 Tm (English and Urdu) Tj ET
+0.050 0.490 0.590 rg BT /F2 10.5 Tf 1 0 0 1 48.0 416.7 Tm (SELECTED PROJECTS) Tj ET
+0.810 0.875 0.905 RG 48 407.69999999999976 m 564 407.69999999999976 l S
+0.080 0.190 0.280 rg BT /F2 10.8 Tf 1 0 0 1 48.0 392.7 Tm (Collect360 - Banking Collection Management System \(CMS\)) Tj ET
+0.350 0.460 0.560 rg BT /F1 8.6 Tf 1 0 0 1 48.0 375.7 Tm (Nov 2026) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 48.0 357.7 Tm (Designed and developed Collect360, a banking CMS for repayment tracking, overdue accounts, credit card debt) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 48.0 344.0 Tm (recovery, customer follow-ups, Promise to Pay, hardship assessments, repayment arrangements and recovery) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 48.0 330.3 Tm (escalation.) Tj ET
+0.250 0.350 0.430 rg BT /F1 8.2 Tf 1 0 0 1 48.0 309.6 Tm (Tech: Python, FastAPI, PostgreSQL, Memgraph, Kafka, Microservices, API Gateway, JWT, OAuth 2.0, RBAC, AWS S3) Tj ET
+0.250 0.350 0.430 rg BT /F1 8.2 Tf 1 0 0 1 48.0 295.9 Tm (and SES.) Tj ET
+0.050 0.500 0.580 rg BT /F1 8.3 Tf 1 0 0 1 48.0 277.2 Tm (github.com/saqlainqurashi/CMS) Tj ET
+0.080 0.190 0.280 rg BT /F2 10.8 Tf 1 0 0 1 48.0 243.5 Tm (GenInsuredAI - AI-Powered Insurance Automation Platform) Tj ET
+0.350 0.460 0.560 rg BT /F1 8.6 Tf 1 0 0 1 48.0 226.5 Tm (Sep 2026) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 48.0 208.5 Tm (Contributed to an AI-powered end-to-end insurance platform spanning lead acquisition, risk assessment,) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 48.0 194.8 Tm (underwriting, policy issuance and servicing.) Tj ET
+0.250 0.350 0.430 rg BT /F1 8.2 Tf 1 0 0 1 48.0 174.1 Tm (Tech: Python, FastAPI, PostgreSQL, Kafka, Microservices, API Gateway, JWT, OAuth 2.0, RBAC, AWS S3 and SES.) Tj ET
+0.050 0.500 0.580 rg BT /F1 8.3 Tf 1 0 0 1 48.0 155.4 Tm (github.com/saqlainqurashi/getinsuredai) Tj ET
+0.450 0.550 0.630 rg BT /F1 8.5 Tf 1 0 0 1 539.0 30.0 Tm (2 / 3) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 10 0 R >>
+endobj
+10 0 obj
+<< /Length 3111 >>
+stream
+0.110 0.710 0.780 rg 48 766 516 3 re f
+0.060 0.170 0.240 rg BT /F2 15.4 Tf 1 0 0 1 48.0 754.0 Tm (Muhammad Saqlain Arshad) Tj ET
+0.050 0.490 0.590 rg BT /F2 10.5 Tf 1 0 0 1 48.0 705.0 Tm (SELECTED PROJECTS \(CONTINUED\)) Tj ET
+0.810 0.875 0.905 RG 48 696 m 564 696 l S
+0.080 0.190 0.280 rg BT /F2 10.8 Tf 1 0 0 1 48.0 681.0 Tm (AI Voice Agent for Real Estate) Tj ET
+0.350 0.460 0.560 rg BT /F1 8.6 Tf 1 0 0 1 48.0 664.0 Tm (Dec 2025) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 48.0 646.0 Tm (AI-powered voice agent capable of making and receiving calls, answering customer inquiries, scheduling calendar) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 48.0 632.3 Tm (meetings and transferring calls to human agents.) Tj ET
+0.250 0.350 0.430 rg BT /F1 8.2 Tf 1 0 0 1 48.0 611.6 Tm (Tech: Retell AI, n8n, LLMs, Voice AI, Conversational AI, Google Calendar API, Webhooks and Automation.) Tj ET
+0.050 0.500 0.580 rg BT /F1 8.3 Tf 1 0 0 1 48.0 592.9 Tm (github.com/saqlainqurashi/n8n-AI-calling-agent) Tj ET
+0.080 0.190 0.280 rg BT /F2 10.8 Tf 1 0 0 1 48.0 559.2 Tm (Smart Parking Solution) Tj ET
+0.350 0.460 0.560 rg BT /F1 8.6 Tf 1 0 0 1 48.0 542.2 Tm (Dec 2023) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 48.0 524.2 Tm (Camera-based parking monitoring to detect vacant, occupied and incorrectly parked spaces. Includes user mobile) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 48.0 510.5 Tm (access for live availability and reservations and a web-based admin interface.) Tj ET
+0.250 0.350 0.430 rg BT /F1 8.2 Tf 1 0 0 1 48.0 489.8 Tm (Tech: Python, TensorFlow, OpenCV, YOLO, FastAPI, React, Firebase, PostgreSQL, WebSockets, NumPy and Pandas.) Tj ET
+0.050 0.500 0.580 rg BT /F1 8.3 Tf 1 0 0 1 48.0 471.1 Tm (github.com/saqlainqurashi/AI-Powered-Smart-Parking-System) Tj ET
+0.050 0.490 0.590 rg BT /F2 10.5 Tf 1 0 0 1 48.0 434.4 Tm (CERTIFICATIONS) Tj ET
+0.810 0.875 0.905 RG 48 425.39999999999986 m 564 425.39999999999986 l S
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 48.0 417.4 Tm (Huawei HCIA Certified | Huawei | Oct 2023) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 48.0 396.7 Tm (Microsoft AI Advanced | Microsoft | Oct 2023) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 48.0 376.0 Tm (Microsoft Azure AI Fundamentals | Microsoft | Sep 2023) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 48.0 355.3 Tm (Transformer Models and BERT Model | Google | Jun 2024) Tj ET
+0.050 0.490 0.590 rg BT /F2 10.5 Tf 1 0 0 1 48.0 324.6 Tm (CONTACT) Tj ET
+0.810 0.875 0.905 RG 48 315.5999999999999 m 564 315.5999999999999 l S
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 48.0 307.6 Tm (Email: muhammadsaqlainarshad@gmail.com) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 48.0 286.9 Tm (Phone: +923134975658) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 48.0 266.2 Tm (Location: Lahore, Pakistan) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 48.0 245.5 Tm (LinkedIn: linkedin.com/in/muhammad-saqlain-arshad/) Tj ET
+0.250 0.350 0.430 rg BT /F1 9.1 Tf 1 0 0 1 48.0 224.8 Tm (GitHub: github.com/saqlainqurashi) Tj ET
+0.450 0.550 0.630 rg BT /F1 8.5 Tf 1 0 0 1 539.0 30.0 Tm (3 / 3) Tj ET
+endstream
+endobj
+xref
+0 11
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000129 00000 n 
+0000000199 00000 n 
+0000000274 00000 n 
+0000000410 00000 n 
+0000005560 00000 n 
+0000005696 00000 n 
+0000009997 00000 n 
+0000010134 00000 n 
+trailer
+<< /Size 11 /Root 1 0 R >>
+startxref
+13297
+%%EOF

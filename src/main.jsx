@@ -5,6 +5,7 @@ import "./styles.css";
 import "./project-showcase.css";
 import "./case-studies.css";
 import "./experience-3d.css";
+import "./contact-mobile.css";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>

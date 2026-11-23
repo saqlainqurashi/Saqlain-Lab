@@ -96,3 +96,13 @@ git pull origin main
 npm install
 npm run dev
 ```
+
+
+## Resume and mobile contact (Phase 6)
+
+- Public PDF resume at `public/Muhammad-Saqlain-Arshad-Resume.pdf`, accessible via the `/Muhammad-Saqlain-Arshad-Resume.pdf` URL.
+- This PDF is a clean, reformatted three-page copy based on the uploaded resume rather than an identical PDF binary.
+- Resume download buttons appear in the desktop header, hero, About section and mobile navigation/dock.
+- Public contact email: `muhammadsaqlainarshad@gmail.com`; public phone: `+923134975658`.
+- Visitors can email (`mailto:`) or call (`tel:`) directly from prominent contact cards, the hero and mobile bottom dock.
+- Mobile-specific spacing, compact CTA layout, safe-area support and accessible 44px+ touch targets.

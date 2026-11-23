@@ -3,13 +3,14 @@ import {
   Activity, ArrowDown, ArrowRight, ArrowUpRight, AudioLines, BookOpen,
   BrainCircuit, Check, ChevronRight, Code2, Cpu, Database, ExternalLink,
   Github, Globe2, Linkedin, Mail, Menu, Network, ScanLine, ShieldCheck,
-  Sparkles, Workflow, X
+  Sparkles, Workflow, X, Phone
 } from "lucide-react";
 import { experience, projects, skillGroups } from "./data";
 import ProjectVisual from "./ProjectVisual";
 import CaseStudyDialog from "./CaseStudy";
 import HeroExperience from "./HeroExperience";
 import SignalLab from "./SignalLab";
+import { ResumeLink, ContactCards, MobileQuickDock, ResumeHighlight, CONTACT_EMAIL, CONTACT_PHONE, PHONE_HREF } from "./ContactUX";
 
 const email = "muhammadsaqlainarshad@gmail.com";
 const github = "https://github.com/saqlainqurashi";
@@ -102,7 +103,9 @@ function App() {
               <a key={label} href={"#" + label.toLowerCase()} onClick={() => setMenuOpen(false)}>{label}</a>
             )}
             <a className="nav-mobile-contact" href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+            <ResumeLink className="resume-nav-link">Download CV</ResumeLink>
           </nav>
+          <ResumeLink className="nav-desktop-resume"><span>RESUME</span></ResumeLink>
           <a className="nav-contact" href="#contact">LET'S TALK <ArrowUpRight size={15}/></a>
           <button className="mobile-menu-button" onClick={() => setMenuOpen(value => !value)}
             aria-label={menuOpen ? "Close menu" : "Open menu"} aria-expanded={menuOpen}>
@@ -120,8 +123,9 @@ function App() {
             <p className="hero-description">I'm <strong>Muhammad Saqlain Arshad</strong>, a Senior AI/ML Engineer building intelligent software that goes beyond demos — from RAG and AI automation to enterprise platforms that solve real problems.</p>
             <div className="hero-buttons">
               <a href="#work" className="button button-primary">Explore my work <ArrowUpRight size={18}/></a>
-              <a href="#contact" className="button button-outline">Get in touch <ArrowRight size={17}/></a>
+              <ResumeLink className="button button-outline hero-cta-resume">Download CV <ArrowUpRight size={17}/></ResumeLink>
             </div>
+            <div className="hero-direct-contact"><a href={"mailto:" + CONTACT_EMAIL} aria-label={"Email " + CONTACT_EMAIL}><Mail size={15}/>{CONTACT_EMAIL}</a><a href={PHONE_HREF} aria-label={"Call " + CONTACT_PHONE}><Phone size={15}/>{CONTACT_PHONE}</a></div>
             <div className="hero-footnote"><span className="footnote-line"/><span>BASED IN LAHORE, PAKISTAN <b>·</b> WORKING ACROSS BORDERS</span></div>
           </div>
           <HeroExperience />
@@ -144,6 +148,7 @@ function App() {
               <a className="inline-link" href="#experience">More about my journey <ArrowUpRight size={16}/></a>
             </div>
           </div>
+          <ResumeHighlight/>
           <div className="info-strip">
             <div><span className="info-icon"><Code2 size={20}/></span><span><strong>Since 2022</strong><small>Building AI solutions</small></span></div>
             <div><span className="info-icon"><Network size={20}/></span><span><strong>Enterprise + independent</strong><small>Real-world engineering</small></span></div>
@@ -212,6 +217,7 @@ function App() {
             <div className="section-kicker"><span>06 / WHAT'S NEXT?</span><span className="kicker-rule"/></div>
             <div className="contact-content"><div><p className="contact-eyebrow">HAVE A CHALLENGE IN MIND?</p><h2>Let's build something<br/><em>intelligent.</em></h2><p className="contact-description">Whether it's an AI product, automation idea, or engineering opportunity, I'd love to hear what you're working on.</p></div>
               <a href={"mailto:" + email + "?subject=Let's%20build%20something"} className="contact-arrow" aria-label="Start an email conversation"><ArrowUpRight size={40}/></a></div>
+            <ContactCards/>
             <div className="contact-bottom"><a className="email-link" href={"mailto:" + email}>{email} <ArrowUpRight size={17}/></a>
               <div className="social-links"><a href={github} target="_blank" rel="noopener noreferrer" aria-label="GitHub"><Github size={20}/></a><a href={linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><Linkedin size={20}/></a><a href={"mailto:" + email} aria-label="Email"><Mail size={20}/></a></div>
             </div>
@@ -219,7 +225,8 @@ function App() {
         </section>
       </main>
 
-      <footer className="site-footer"><div className="container footer-inner"><Mark/><span>© {new Date().getFullYear()} Muhammad Saqlain Arshad</span><a href="#top">BACK TO TOP ↑</a></div></footer>
+      <footer className="site-footer"><div className="container footer-inner"><Mark/><span>© {new Date().getFullYear()} Muhammad Saqlain Arshad</span><a className="phone-link-footer" href={PHONE_HREF}><Phone size={14}/>{CONTACT_PHONE}</a><a href="#top">BACK TO TOP ↑</a></div></footer>
+      <MobileQuickDock/>
       <CaseStudyDialog project={selectedProject} onClose={closeProject}/>
     </div>
   );
