@@ -120,7 +120,7 @@ function App() {
           <div className="hero-copy">
             <div className="eyebrow"><span className="pulse-dot"/> SENIOR AI / ML ENGINEER <span className="eyebrow-line"/></div>
             <h1 id="hero-title">Beyond<br/><em>the prompt.</em><br/>Into <span className="hero-outline">production.</span></h1>
-            <p className="hero-description">I'm <strong>Muhammad Saqlain Arshad</strong>, a Senior AI/ML Engineer building intelligent software that goes beyond demos — from RAG and AI automation to enterprise platforms that solve real problems.</p>
+            <p className="hero-description">I'm <strong>Muhammad Saqlain Arshad</strong> (Saqlain Arshad), a Senior AI/ML Engineer building intelligent software that goes beyond demos — from RAG and AI automation to enterprise platforms that solve real problems.</p>
             <div className="hero-buttons">
               <a href="#work" className="button button-primary">Explore my work <ArrowUpRight size={18}/></a>
               <ResumeLink className="button button-outline hero-cta-resume">Download CV <ArrowUpRight size={17}/></ResumeLink>
